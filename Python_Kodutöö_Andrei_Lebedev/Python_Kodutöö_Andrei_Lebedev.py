@@ -1,29 +1,50 @@
+from ast import Try
 import math
 
 print("Ruudu karakteristikud")
-a=float(input("Sisesta ruudu k¸lje pikkus => "))
+while True:
+    try:
+        a=int(input("Sisesta ruudu k√ºlje pikkus => "))
+        break
+    except ValueError:
+        print("Viga: sisestage arvv√§√§rtus.")
 S=a**2
 print("Ruudu pindala", S)
 P=4*a
-print("Ruudu ¸mbermııt", P)
-di=a*math.sqr(2)
+print("Ruudu √ºmberm√µ√µt", P)
+di=a*math.sqrt(2)
 print("Ruudu diagonaal:", round(di,2))
 print()
-print("Ristk¸liku karakteristikud")
-b=float(input("Sisesta ristk¸liku 1. k¸lje pikkus => "))
-c=float(input("Sisesta ristk¸liku 2. k¸lje pikkus => "))
+print("Ristk√ºliku karakteristikud")
+while True:
+    try:
+        b=int(input("Sisesta ristk√ºliku 1. k√ºlje pikkus => "))
+        break
+    except ValueError:
+        print("Viga: sisestage arvv√§√§rtus.")
+while True:
+    try:
+        c=int(input("Sisesta ristk√ºliku 2. k√ºlje pikkus => "))
+        break
+    except ValueError:
+        print("Viga: sisestage arvv√§√§rtus.")
 S=b*c
-print("Ristk¸liku pindala", S)
+print("Ristk√ºliku pindala", S)
 P=2*(b+c)
-print("Ristk¸liku ¸mbermııt", P)
-di=math.sqrt(b*2+c*2)
-print("Ristk¸liku diagonaal", round(di,2))
+print("Ristk√ºliku √ºmberm√µ√µt", P)
+di=math.sqrt(b**2+c**2)
+print("Ristk√ºliku diagonaal", round(di,2))
 print()
 print("Ringi karakteristikud")
-r=float(input("Sisesta ringi raadiusi pikkus => "))
+while True:
+    try:
+        r=int(input("Sisesta ringi raadiusi pikkus => "))
+        break
+    except ValueError:
+        print("Viga: sisestage arvv√§√§rtus.")
 d=2*r
-print("Ringi l‰bimııt" , (d))
-S=math.pi()*r*2
-print("Ringi pindala", round(S))
-C=2*math.pi()*r
-print("Ringjoone pikkus", round(C))
+print("Ringi l√§bim√µ√µt" , (d))
+S=math.pi*r**2
+print("Ringi pindala", round(S,2))
+C=2*math.pi*r
+print("Ringjoone pikkus", round(C,2))
